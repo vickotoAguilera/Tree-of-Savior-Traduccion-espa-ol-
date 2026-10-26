@@ -1,0 +1,16 @@
+# Solo se publica lo necesario para instalar la traduccion:
+#   README.md, instalar.py, instalar.bat, desinstalar.bat, parche/, imagenes/
+# Todo lo demas (herramientas, fuente editable, documentos internos) queda local.
+docs/
+tools/
+tests/
+work/
+backup/
+tos_prueba/
+.agents/
+AGENTS.md
+-Context
+__pycache__/
+*.pyc
+*.bak
+*.bak_spanish

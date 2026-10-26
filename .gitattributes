@@ -1,0 +1,4 @@
+# Los .tsv se versionan tal cual (LF/CRLF importan para el juego)
+*.tsv -text
+*.py text eol=lf
+*.bat text eol=crlf
