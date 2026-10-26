@@ -67,6 +67,8 @@ usa PowerShell, que ya viene con Windows 10 y 11.
    pedirá que pegues la ruta de la carpeta `TreeOfSavior`.
 5. Verás una lista con los archivos traducidos y el mensaje **"Listo"**.
 
+   ![Instalador terminado](imagenes/instalador.jpg)
+
 > **¿Windows muestra "Windows protegió su PC"?** Es normal con archivos `.bat` descargados. Pulsa
 > **Más información → Ejecutar de todas formas**. Puedes abrir `instalar.bat` e `instalar.ps1` con el Bloc de
 > notas para ver exactamente qué hacen: solo copian tu carpeta `English` a `Spanish` y reemplazan el texto.
