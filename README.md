@@ -11,7 +11,7 @@ los mensajes del sistema, toda la historia y las misiones, y las descripciones d
 | :--- | :--- |
 | **Versión del parche** | **v1.0** |
 | **Fecha** | 26 de octubre de 2026 |
-| **Basada en el juego** | revisión **408027** (cliente 2.0.82). Probada en el cliente 2.0.82.408136 |
+| **Basada en el juego** | revisión **408027** (cliente 2.0.82). Verificada sin textos nuevos hasta la revisión **408142** (cliente 2.0.82.408136) |
 | **Idioma / estilo** | español latino neutro, tratamiento de "tú" |
 | **Textos traducidos** | 215.504 |
 | **Próxima actualización** | se revisará cada **1 a 2 meses**; si IMC agrega contenido nuevo, se traducirá y se publicará una versión nueva |
