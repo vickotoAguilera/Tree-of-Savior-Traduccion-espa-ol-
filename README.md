@@ -71,10 +71,31 @@ usa PowerShell, que ya viene con Windows 10 y 11.
 > **Más información → Ejecutar de todas formas**. Puedes abrir `instalar.bat` e `instalar.ps1` con el Bloc de
 > notas para ver exactamente qué hacen: solo copian tu carpeta `English` a `Spanish` y reemplazan el texto.
 
-**¿Prefieres hacerlo a mano, sin ejecutar nada?** No es posible editar a mano las 215.000 líneas, y no
-publicamos los archivos ya armados porque incluirían el texto original de IMC. La alternativa es ejecutar el
-script desde una consola de PowerShell en la carpeta descomprimida:
-`powershell -ExecutionPolicy Bypass -File instalar.ps1` (el `Bypass` solo vale para esa ejecución y es lo que usa `instalar.bat`). (En Linux/Proton o Mac: `python3 instalar.py --juego "RUTA/languageData"`.)
+### Si el doble clic no funciona (instalación con comandos, paso a paso)
+
+A veces Windows bloquea los archivos `.bat`. En ese caso se instala escribiendo un comando. Es fácil:
+
+1. **Abre la carpeta** donde descomprimiste el ZIP (la que contiene `instalar.ps1`, `instalar.bat` y la carpeta `parche`).
+2. **Abre PowerShell en esa carpeta:** haz clic en un espacio vacío dentro de la carpeta mientras mantienes
+   pulsada la tecla **Shift** (mayúsculas) y elige **"Abrir ventana de PowerShell aquí"**
+   (en Windows 11: clic derecho → **"Abrir en Terminal"**).
+   - *Otra forma:* pulsa la tecla **Windows**, escribe **`powershell`** y pulsa Enter. Luego escribe `cd ` (con un espacio),
+     **arrastra la carpeta descomprimida** dentro de la ventana azul (se escribe sola la ruta) y pulsa Enter.
+3. **Copia y pega este comando** (clic derecho dentro de la ventana pega el texto) y pulsa **Enter**:
+   ```
+   powershell -ExecutionPolicy Bypass -File .\instalar.ps1
+   ```
+   `Bypass` solo vale para esta ejecución; no cambia nada en tu sistema.
+4. Si el juego no está en la ruta normal de Steam, el programa te pedirá la ruta. Para encontrarla: en **Steam**,
+   clic derecho sobre *Tree of Savior* → **Administrar → Examinar archivos locales**. Copia la ruta de la barra de
+   direcciones de esa carpeta y pégala en la ventana.
+5. Espera el mensaje **"Listo"**.
+
+Para **desinstalar** con comandos: `powershell -ExecutionPolicy Bypass -File .\instalar.ps1 -Desinstalar`.
+
+**¿Prefieres hacerlo totalmente a mano, sin ejecutar nada?** No es posible editar a mano las 215.000 líneas, y no
+publicamos los archivos ya armados porque incluirían el texto original de IMC; por eso el instalador los arma en tu
+PC. (En Linux/Proton o Mac: `python3 instalar.py --juego "RUTA/languageData"`.)
 
 ### Poner el juego en español
 
@@ -86,6 +107,17 @@ script desde una consola de PowerShell en la carpeta descomprimida:
 
 > Si no te aparece *Spanish* en la lista, el instalador no terminó bien (paso 5) o instalaste con el juego abierto.
 > Vuelve a ejecutar `instalar.bat` con el juego cerrado.
+
+## ❓ Problemas comunes
+
+| Problema | Solución |
+| :--- | :--- |
+| *"Windows protegió su PC"* al abrir `instalar.bat` | Pulsa **Más información → Ejecutar de todas formas**, o usa la instalación con comandos. |
+| Aparece *"No encontré la carpeta languageData\English"* | La ruta es incorrecta. Usa la de Steam → *Administrar → Examinar archivos locales* (debe contener la carpeta `release`). |
+| *Spanish* no aparece en la lista de idiomas | Instalaste con el juego abierto o el instalador falló. Cierra el juego y vuelve a ejecutarlo. |
+| El juego se ve en inglés tras elegir Spanish | Cierra el juego por completo y ábrelo de nuevo (el cambio de idioma pide reiniciar). |
+| Quedaron textos en inglés | Son textos nuevos de un parche de IMC. Se traducen en la siguiente versión de la traducción. |
+| El instalador dice que falta la carpeta `parche` | Ejecutaste el script desde dentro del ZIP. **Descomprime** el ZIP primero. |
 
 ## 🔄 Actualizar
 
