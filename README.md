@@ -54,20 +54,27 @@ Así se mantienen los nombres que usa la comunidad y se evitan confusiones al bu
 
 ## 🧭 Instalación paso a paso (Windows)
 
-Necesitas tener **Tree of Savior instalado en Steam** y **Python 3.8 o superior**
-(gratis: <https://www.python.org/downloads/>; durante la instalación marca **"Add Python to PATH"**).
+Necesitas tener **Tree of Savior instalado en Steam**. **No hace falta instalar nada más**: el instalador
+usa PowerShell, que ya viene con Windows 10 y 11.
 
 1. **Cierra el juego** por completo.
 2. **Descarga este repositorio:** botón verde **Code → Download ZIP**.
-3. **Descomprime el ZIP** en cualquier carpeta (por ejemplo, el Escritorio).
+3. **Descomprime el ZIP** en cualquier carpeta (por ejemplo, el Escritorio). Importante: descomprímelo, no lo
+   ejecutes desde dentro del ZIP.
 4. Haz **doble clic en `instalar.bat`** y pulsa una tecla cuando te lo pida.
    El instalador busca el juego en la ruta normal de Steam
-   (`C:\Program Files (x86)\Steam\steamapps\common\TreeOfSavior`).
-   Si lo tienes en otro disco, abre una consola en esa carpeta y ejecuta:
-   ```
-   python instalar.py --juego "D:\SteamLibrary\steamapps\common\TreeOfSavior\release\languageData"
-   ```
+   (`C:\Program Files (x86)\Steam\steamapps\common\TreeOfSavior`). Si lo tienes en otro disco, te
+   pedirá que pegues la ruta de la carpeta `TreeOfSavior`.
 5. Verás una lista con los archivos traducidos y el mensaje **"Listo"**.
+
+> **¿Windows muestra "Windows protegió su PC"?** Es normal con archivos `.bat` descargados. Pulsa
+> **Más información → Ejecutar de todas formas**. Puedes abrir `instalar.bat` e `instalar.ps1` con el Bloc de
+> notas para ver exactamente qué hacen: solo copian tu carpeta `English` a `Spanish` y reemplazan el texto.
+
+**¿Prefieres hacerlo a mano, sin ejecutar nada?** No es posible editar a mano las 215.000 líneas, y no
+publicamos los archivos ya armados porque incluirían el texto original de IMC. La alternativa es ejecutar el
+script desde una consola de PowerShell en la carpeta descomprimida:
+`powershell -ExecutionPolicy Bypass -File instalar.ps1` (el `Bypass` solo vale para esa ejecución y es lo que usa `instalar.bat`). (En Linux/Proton o Mac: `python3 instalar.py --juego "RUTA/languageData"`.)
 
 ### Poner el juego en español
 
